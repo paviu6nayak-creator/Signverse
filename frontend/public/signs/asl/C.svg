@@ -1,0 +1,49 @@
+<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="200" height="160" rx="16" fill="#0f172a" />
+  
+  <defs>
+    <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#34d399" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.95" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Large Center Watermark Letter/Digit -->
+  <text x="100" y="94" fill="#34d399" opacity="0.08" fontSize="84" fontWeight="900" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    C
+  </text>
+
+  <!-- Handshape Vector Diagram -->
+  <g filter="url(#softGlow)">
+    
+            <!-- Curved C Shape -->
+            <!-- Top finger arc -->
+            <path d="M 130 45 C 80 40, 58 75, 60 100 C 62 125, 90 135, 130 130 L 126 114 C 95 116, 78 110, 78 98 C 78 86, 92 60, 126 62 Z" fill="url(#handGrad)" stroke="#059669" stroke-width="2" />
+            <!-- Individual 4 fingers curved together in arc -->
+            <rect x="108" y="44" width="24" height="16" rx="7" fill="#a7f3d0" />
+            <!-- Thumb bottom curve -->
+            <rect x="108" y="116" width="24" height="15" rx="7" fill="#6ee7b7" />
+            <!-- Inner open space indication -->
+            <circle cx="95" cy="88" r="14" fill="#064e3b" opacity="0.4" />
+            <!-- Wrist -->
+            <rect x="44" y="90" width="22" height="28" rx="6" fill="#064e3b" />
+        
+  </g>
+
+  <!-- Top Left Identification Badge -->
+  <rect x="12" y="12" width="32" height="24" rx="8" fill="#34d399" fill-opacity="0.15" stroke="#34d399" stroke-width="1.5" />
+  <text x="28" y="29" fill="#34d399" fontSize="13" fontWeight="bold" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    C
+  </text>
+
+  <!-- Bottom Instruction Pill -->
+  <rect x="14" y="130" width="172" height="22" rx="11" fill="#1e293b" stroke="#34d399" stroke-opacity="0.2" stroke-width="1" />
+  <text x="100" y="145" fill="#34d399" fontSize="10.5" fontWeight="600" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Letter C · ASL Sign
+  </text>
+</svg>

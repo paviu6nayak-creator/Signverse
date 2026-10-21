@@ -1,0 +1,48 @@
+<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="200" height="160" rx="16" fill="#0f172a" />
+  
+  <defs>
+    <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#f59e0b" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.95" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Large Center Watermark Letter/Digit -->
+  <text x="100" y="94" fill="#f59e0b" opacity="0.08" fontSize="84" fontWeight="900" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    P
+  </text>
+
+  <!-- Handshape Vector Diagram -->
+  <g filter="url(#softGlow)">
+    
+            <!-- Fist Base pointing down -->
+            <rect x="74" y="45" width="52" height="50" rx="16" fill="url(#handGrad)" />
+            <!-- Index finger pointing straight DOWN -->
+            <rect x="76" y="80" width="13" height="60" rx="6.5" fill="#fed7aa" stroke="#d97706" stroke-width="2" />
+            <!-- Middle finger angled forward-down -->
+            <rect x="94" y="78" width="13" height="54" rx="6.5" fill="#fef3c7" stroke="#d97706" stroke-width="2" transform="rotate(-30 94 85)" />
+            <!-- Thumb touching middle finger joint -->
+            <circle cx="94" cy="88" r="8" fill="#fde68a" stroke="#b45309" stroke-width="1.5" />
+            <!-- Wrist coming from above -->
+            <rect x="84" y="18" width="32" height="30" rx="6" fill="#78350f" />
+        
+  </g>
+
+  <!-- Top Left Identification Badge -->
+  <rect x="12" y="12" width="32" height="24" rx="8" fill="#f59e0b" fill-opacity="0.15" stroke="#f59e0b" stroke-width="1.5" />
+  <text x="28" y="29" fill="#f59e0b" fontSize="13" fontWeight="bold" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    P
+  </text>
+
+  <!-- Bottom Instruction Pill -->
+  <rect x="14" y="130" width="172" height="22" rx="11" fill="#1e293b" stroke="#f59e0b" stroke-opacity="0.2" stroke-width="1" />
+  <text x="100" y="145" fill="#f59e0b" fontSize="10.5" fontWeight="600" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Letter P · ASL Sign
+  </text>
+</svg>

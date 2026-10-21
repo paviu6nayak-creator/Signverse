@@ -1,0 +1,38 @@
+# Node
+node_modules/
+dist/
+
+# Python & Virtual Environments
+venv/
+.venv/
+*/venv/
+*/.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Environment variables & local secrets
+.env
+.env.local
+.env.*.local
+*.env
+!*.env.example
+
+# File uploads and logs
+uploads/
+*/uploads/
+*.log
+
+# Editor & OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# AI Model large datasets & binary models
+ai-model/models/*
+!ai-model/models/.gitkeep
+ai-model/dataset/*
+!ai-model/dataset/.gitkeep

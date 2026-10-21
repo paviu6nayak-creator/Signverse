@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Trained model artifacts and collected data are typically large / user-specific —
+# keep the folders in git (.gitkeep) but not their contents.
+models/*
+!models/.gitkeep
+dataset/*
+!dataset/.gitkeep
+
+.DS_Store

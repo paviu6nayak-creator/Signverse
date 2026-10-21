@@ -1,0 +1,47 @@
+<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="200" height="160" rx="16" fill="#0f172a" />
+  
+  <defs>
+    <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#2dd4bf" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.95" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Large Center Watermark Letter/Digit -->
+  <text x="100" y="94" fill="#2dd4bf" opacity="0.08" fontSize="84" fontWeight="900" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    F
+  </text>
+
+  <!-- Handshape Vector Diagram -->
+  <g filter="url(#softGlow)">
+    
+            <!-- 3 Open fingers standing upright & slightly fanned -->
+            <rect x="92" y="20" width="12" height="60" rx="6" fill="#99f6e4" stroke="#0d9488" stroke-width="1.5" transform="rotate(-6 98 50)" />
+            <rect x="108" y="22" width="12" height="58" rx="6" fill="#ccfbf1" stroke="#0d9488" stroke-width="1.5" />
+            <rect x="123" y="28" width="11" height="52" rx="5.5" fill="#99f6e4" stroke="#0d9488" stroke-width="1.5" transform="rotate(6 128 54)" />
+            <!-- Index & Thumb touch forming circle at left/front -->
+            <ellipse cx="76" cy="86" rx="22" ry="20" fill="url(#handGrad)" stroke="#0d9488" stroke-width="2" />
+            <ellipse cx="76" cy="86" rx="9" ry="8" fill="#134e4a" />
+            <!-- Wrist -->
+            <rect x="82" y="125" width="36" height="25" rx="6" fill="#115e59" />
+        
+  </g>
+
+  <!-- Top Left Identification Badge -->
+  <rect x="12" y="12" width="32" height="24" rx="8" fill="#2dd4bf" fill-opacity="0.15" stroke="#2dd4bf" stroke-width="1.5" />
+  <text x="28" y="29" fill="#2dd4bf" fontSize="13" fontWeight="bold" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    F
+  </text>
+
+  <!-- Bottom Instruction Pill -->
+  <rect x="14" y="130" width="172" height="22" rx="11" fill="#1e293b" stroke="#2dd4bf" stroke-opacity="0.2" stroke-width="1" />
+  <text x="100" y="145" fill="#2dd4bf" fontSize="10.5" fontWeight="600" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Letter F · ASL Sign
+  </text>
+</svg>

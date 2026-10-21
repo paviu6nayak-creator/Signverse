@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/*
+  SignVerse design tokens
+  -----------------------
+  Void/Signal/Pulse/Warm palette + Space Grotesk/Inter/JetBrains Mono type
+  scale are defined in tailwind.config.js. This file holds the handful of
+  effects (glass panels, gradient text, focus rings) that are easier to
+  express as plain CSS than as Tailwind utility soup.
+*/
+
+:root {
+  /* Light mode (default — no .dark class) */
+  --c-void: 244 247 252;
+  --c-surface: 255 255 255;
+  --c-surface-2: 246 248 252;
+  --c-surface-3: 232 236 244;
+  --c-ink: 15 20 32;
+  --c-ink-muted: 90 99 122;
+  --c-ink-faint: 148 156 176;
+}
+
+.dark {
+  /* Dark mode (default theme for SignVerse) */
+  --c-void: 10 15 30;
+  --c-surface: 19 27 46;
+  --c-surface-2: 27 37 64;
+  --c-surface-3: 36 47 78;
+  --c-ink: 234 240 251;
+  --c-ink-muted: 139 150 174;
+  --c-ink-faint: 91 100 128;
+}
+
+@layer base {
+  * {
+    @apply border-surface-3;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-void text-ink transition-colors duration-300;
+  }
+  ::selection {
+    @apply bg-signal/30 text-ink;
+  }
+  /* Visible keyboard focus everywhere — required for an accessibility-focused product */
+  :focus-visible {
+    outline: 2px solid theme("colors.signal.DEFAULT");
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-surface/60 backdrop-blur-xl border border-ink/[0.07] shadow-glass;
+  }
+
+  .glass-card {
+    @apply glass-panel rounded-xl2 transition-all duration-300;
+  }
+
+  .glass-card-hover {
+    @apply hover:border-signal/30 hover:shadow-glow-signal hover:-translate-y-1;
+  }
+
+  .gradient-text {
+    @apply bg-signal-gradient bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full bg-signal-gradient px-6 py-3
+           font-display font-semibold text-void shadow-glow-signal transition-transform duration-200
+           hover:scale-[1.03] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-full border border-ink/10 bg-ink/5
+           px-6 py-3 font-display font-semibold text-ink backdrop-blur-md transition-colors duration-200
+           hover:bg-ink/10 hover:border-ink/20 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-5 py-2.5 font-medium text-ink-muted
+           transition-colors duration-200 hover:text-ink hover:bg-ink/5;
+  }
+
+  .input-field {
+    @apply w-full rounded-xl border border-ink/10 bg-ink/5 px-4 py-3 text-ink placeholder:text-ink-faint
+           outline-none transition-colors duration-200 focus:border-signal/50 focus:bg-ink/[0.07];
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full border border-ink/10 bg-ink/5 px-3 py-1
+           text-xs font-medium text-ink-muted;
+  }
+
+  .stat-number {
+    @apply font-mono font-medium tabular-nums;
+  }
+
+  .skeleton-shimmer {
+    background: linear-gradient(90deg, theme("colors.surface-2") 25%, theme("colors.surface-3") 50%, theme("colors.surface-2") 75%);
+    background-size: 200% 100%;
+    @apply animate-shimmer rounded-lg;
+  }
+}

@@ -1,0 +1,14 @@
+# Lightweight requirements for local development (omits heavy ML packages)
+fastapi==0.111.0
+uvicorn[standard]==0.30.1
+python-multipart==0.0.9
+pydantic==2.7.4
+pydantic-settings==2.3.4
+email-validator==2.1.1
+motor==3.4.0
+pymongo==4.7.3
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+bcrypt==4.1.3
+# numpy/tensorflow intentionally omitted — backend will use mock predictions when a trained model is absent
+python-dotenv==1.0.1

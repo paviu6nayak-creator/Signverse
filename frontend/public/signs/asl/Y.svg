@@ -1,0 +1,50 @@
+<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="200" height="160" rx="16" fill="#0f172a" />
+  
+  <defs>
+    <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#f97316" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.95" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Large Center Watermark Letter/Digit -->
+  <text x="100" y="94" fill="#f97316" opacity="0.08" fontSize="84" fontWeight="900" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Y
+  </text>
+
+  <!-- Handshape Vector Diagram -->
+  <g filter="url(#softGlow)">
+    
+            <!-- Fist Center (3 middle fingers closed) -->
+            <rect x="74" y="65" width="52" height="58" rx="18" fill="url(#handGrad)" />
+            <!-- Thumb extended out to the left -->
+            <rect x="25" y="70" width="56" height="16" rx="8" fill="#fed7aa" stroke="#c2410c" stroke-width="2" transform="rotate(-25 53 78)" />
+            <!-- Pinky extended out to the right -->
+            <rect x="119" y="70" width="56" height="15" rx="7.5" fill="#ffedd5" stroke="#c2410c" stroke-width="2" transform="rotate(25 147 77)" />
+            <!-- 3 Curled finger pads in center -->
+            <rect x="76" y="68" width="48" height="12" rx="6" fill="#fb923c" />
+            <rect x="76" y="82" width="48" height="12" rx="6" fill="#ea580c" />
+            <rect x="78" y="96" width="44" height="12" rx="6" fill="#c2410c" />
+            <!-- Wrist -->
+            <rect x="82" y="125" width="36" height="25" rx="6" fill="#7c2d12" />
+        
+  </g>
+
+  <!-- Top Left Identification Badge -->
+  <rect x="12" y="12" width="32" height="24" rx="8" fill="#f97316" fill-opacity="0.15" stroke="#f97316" stroke-width="1.5" />
+  <text x="28" y="29" fill="#f97316" fontSize="13" fontWeight="bold" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Y
+  </text>
+
+  <!-- Bottom Instruction Pill -->
+  <rect x="14" y="130" width="172" height="22" rx="11" fill="#1e293b" stroke="#f97316" stroke-opacity="0.2" stroke-width="1" />
+  <text x="100" y="145" fill="#f97316" fontSize="10.5" fontWeight="600" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Letter Y · ASL Sign
+  </text>
+</svg>

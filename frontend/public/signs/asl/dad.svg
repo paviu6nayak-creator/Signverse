@@ -1,0 +1,40 @@
+<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="200" height="160" rx="16" fill="#0f172a" />
+  
+  <defs>
+    <linearGradient id="grad-dad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#3b82f6" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.95" />
+    </linearGradient>
+    <filter id="glow-dad" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Large Center Watermark -->
+  <text x="100" y="94" fill="#3b82f6" opacity="0.07" fontSize="80" fontWeight="900" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    👨
+  </text>
+
+  <!-- Handshape Vector Diagram -->
+  <g filter="url(#glow-dad)">
+    <ellipse cx="100" cy="80" rx="28" ry="36" fill="url(#grad-dad)" stroke="#3b82f6" stroke-width="2" />
+    <circle cx="100" cy="74" r="14" fill="#082f49" />
+    <path d="M85 96 C85 75, 115 75, 115 96 Z" fill="#3b82f6" fill-opacity="0.3" />
+    <rect x="86" y="116" width="28" height="18" rx="6" fill="#0c4a6e" />
+  </g>
+
+  <!-- Top Left Identification Badge -->
+  <rect x="12" y="12" width="32" height="24" rx="8" fill="#3b82f6" fill-opacity="0.15" stroke="#3b82f6" stroke-width="1.5" />
+  <text x="28" y="29" fill="#3b82f6" fontSize="12" fontWeight="bold" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    👨
+  </text>
+
+  <!-- Bottom Instruction Pill -->
+  <rect x="10" y="130" width="180" height="22" rx="11" fill="#1e293b" stroke="#3b82f6" stroke-opacity="0.25" stroke-width="1" />
+  <text x="100" y="145" fill="#3b82f6" fontSize="10" fontWeight="600" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Dad · 5-hand thumb taps forehead twice
+  </text>
+</svg>

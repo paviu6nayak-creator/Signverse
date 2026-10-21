@@ -1,0 +1,48 @@
+<svg viewBox="0 0 200 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Card Background -->
+  <rect width="200" height="160" rx="16" fill="#0f172a" />
+  
+  <defs>
+    <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stopColor="#38bdf8" stopOpacity="0.9" />
+      <stop offset="100%" stopColor="#0f172a" stopOpacity="0.95" />
+    </linearGradient>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Large Center Watermark Letter/Digit -->
+  <text x="100" y="94" fill="#38bdf8" opacity="0.08" fontSize="84" fontWeight="900" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    O
+  </text>
+
+  <!-- Handshape Vector Diagram -->
+  <g filter="url(#softGlow)">
+    
+            <!-- O ring outer shape -->
+            <ellipse cx="100" cy="85" rx="34" ry="42" fill="url(#handGrad)" stroke="#0284c7" stroke-width="2.5" />
+            <!-- O ring center hole -->
+            <ellipse cx="100" cy="85" rx="16" ry="22" fill="#082f49" />
+            <!-- Finger segments visible on upper curvature -->
+            <path d="M 82 46 C 94 43 106 43 118 46" stroke="#bae6fd" stroke-width="4" stroke-linecap="round" />
+            <!-- Thumb curved on bottom -->
+            <path d="M 84 124 C 94 126 106 126 116 124" stroke="#7dd3fc" stroke-width="4" stroke-linecap="round" />
+            <!-- Wrist -->
+            <rect x="84" y="128" width="32" height="22" rx="6" fill="#0c4a6e" />
+        
+  </g>
+
+  <!-- Top Left Identification Badge -->
+  <rect x="12" y="12" width="32" height="24" rx="8" fill="#38bdf8" fill-opacity="0.15" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="28" y="29" fill="#38bdf8" fontSize="13" fontWeight="bold" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    O
+  </text>
+
+  <!-- Bottom Instruction Pill -->
+  <rect x="14" y="130" width="172" height="22" rx="11" fill="#1e293b" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="1" />
+  <text x="100" y="145" fill="#38bdf8" fontSize="10.5" fontWeight="600" textAnchor="middle" fontFamily="system-ui, sans-serif">
+    Letter O · ASL Sign
+  </text>
+</svg>
