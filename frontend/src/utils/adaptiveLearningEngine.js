@@ -11,17 +11,38 @@
  */
 
 import { ALL_LESSONS } from "../data/lessons.js";
-import {
-  safeGetStorage,
-  safeSetStorage,
-  getLocalDateString,
-  STORAGE_KEYS as BASE_STORAGE_KEYS,
-} from "./dailyPracticeGenerator.js";
+function getLocalDateString(d = new Date()) {
+  const year = d.getFullYear();
+  const month = String(d.getMonth() + 1).padStart(2, "0");
+  const day = String(d.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function safeGetStorage(key, fallback = null) {
+  try {
+    if (typeof window === "undefined" || !window.localStorage) return fallback;
+    const raw = window.localStorage.getItem(key);
+    if (!raw) return fallback;
+    return JSON.parse(raw);
+  } catch (err) {
+    return fallback;
+  }
+}
+
+function safeSetStorage(key, value) {
+  try {
+    if (typeof window === "undefined" || !window.localStorage) return false;
+    window.localStorage.setItem(key, JSON.stringify(value));
+    return true;
+  } catch (err) {
+    return false;
+  }
+}
 
 export const ADAPTIVE_STORAGE_KEYS = {
   SIGN_STATS: "signverse_adaptive_sign_stats",
   CALENDAR_HISTORY: "signverse_streak_calendar_history",
-  PRACTICE_PROGRESS: BASE_STORAGE_KEYS.PROGRESS,
+  PRACTICE_PROGRESS: "signverse_practice_progress",
 };
 
 /**
