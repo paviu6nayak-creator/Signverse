@@ -6,7 +6,6 @@ import ErrorBoundary from "./components/common/ErrorBoundary";
 import Footer from "./components/layout/Footer";
 import Navbar from "./components/layout/Navbar";
 import { AdminRoute, GuestOnlyRoute, ProtectedRoute } from "./components/common/ProtectedRoute";
-import PageLoader from "./components/common/PageLoader";
 
 // Lazy-load every route so the initial bundle stays small — especially
 // important here since a few pages (Live Translation, Sign to Text) pull
@@ -67,7 +66,7 @@ export default function App() {
           error: { iconTheme: { primary: "#F87171", secondary: "#0A0F1E" } },
         }}
       />
-      <Suspense fallback={<PageLoader />}>
+      <Suspense fallback={<div className="min-h-screen bg-slate-900 text-white flex items-center justify-center">Loading...</div>}>
         <Routes>
           {/* Public marketing + informational pages */}
           <Route path="/" element={<Layout><Landing /></Layout>} />
