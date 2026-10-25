@@ -48,13 +48,23 @@ app = FastAPI(
     openapi_url="/api/openapi.json",
     lifespan=lifespan,
 )
+@app.get("/health")
+def health_check():
+    return {"status": "ok"}
 
 # ---------------------------------------------------------------------------
 # Middleware
 # ---------------------------------------------------------------------------
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=settings.cors_origins_list,
+    allow_origins=[
+        "http://localhost:5173",
+        "http://localhost:3000",
+        "https://signverse-web-pearl.vercel.app",
+        "https://signverse-web.vercel.app",
+        "*"
+    ],
+
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
